@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+</head>
+<body>
+    <h1>
+        <center>
+            Registration
+        </center>
+    </h1>
+    <center>
+    <form action="/register" method="post">
+        <label>Enter your name: </label>
+        <input type="text" name="username" placeholder="Name: ">
+        <br>
+        <br>
+        <!-- <p>Enter your BITS email ID: </p> -->
+        <label for="email"> Enter your email ID: </label>
+        <input type="email" name="email" placeholder="Email: " id="bitsemail" required>
+        <br>
+        <br>
+        <label>Enter your Password: </label>
+        <input type="password" name="password" placeholder="Password: ">
+        <br>
+        <br>
+        <label>Confirm your password: </label>
+        <input type="password" name="cpass" placeholder="Password: " required>
+        <br>
+        <br>
+        <!-- <a href="/submitted"> -->
+            <button type="submit" name="Submit">Submit</button>
+        <!-- </a> -->
+    </form>
+</center>
+</body>
+</html>

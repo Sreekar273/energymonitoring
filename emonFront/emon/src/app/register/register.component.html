@@ -1,0 +1,187 @@
+<!-- <p>register works!</p> -->
+
+<!-- <h1>{{title}}</h1> -->
+<!-- <form action="/register" method="post" id="regform"> -->
+<!-- <div class="container-fluid mb-5">
+    <form action="/register" id="regform" #userForm="ngForm" class="form-group">  
+    
+        {{userForm.value | json}}
+        <br>
+        {{userModel | json}}
+        <br>
+        {{name.valid}}
+        <br>
+    
+        <label>Enter your name: </label>
+        <input type="text" name="username" #name="ngModel" required [class.is-invalid]="name.invalid && name.touched" placeholder="Name: " [(ngModel)]="postId.username">
+        <br>
+        <div *ngIf="name.errors && (name.invalid || name.touched)">
+            <small class="text-danger" *ngIf="name.invalid"> Name is required </small>
+        </div>
+        <br>
+        <label for="email"> Enter your email ID: </label>
+        <input type="email" name="email" placeholder="Email: " id="bitsemail" required [(ngModel)]="postId.email">
+        <br>
+        <br>
+        <label>Enter your Password: </label>
+        <input type="password" name="password" placeholder="Password: " [(ngModel)]="postId.password">
+        <br>
+        <br>
+        <label>Confirm your password: </label>
+        <input type="password" name="cpass" placeholder="Password: " required [(ngModel)]="postId.cpass">
+        <br>
+        <br>
+            <button type="submit" name="Submit" [disabled]="userForm.form.invalid">Submit</button>
+    </form>
+</div> -->
+
+<!-- <nav class="navbar navbar-expand navbar-dark bg-dark px-2"> -->
+
+    <!-- <div class="side-nav-button p-2 me-3 text-light">
+        <button class="menu" (click)="toggleSidebar()"> <mat-icon>menu</mat-icon> </button>
+    </div> -->
+
+    <!-- <div class="emon-logo">
+        <a href="/">emon</a>
+    </div> -->
+<!-- 
+    <a href="/" class="navbar-brand px-4"> emon </a>
+
+    <div class="navbar-collapse">
+        <ul class="navbar-nav me-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" href="#">
+                    Menu 1
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                    <li>
+                        <a href="#" class="dropdown-item">Child 1</a>
+                    </li>
+                    <li>
+                        <a href="#" class="dropdown-item">Child 2</a>
+                    </li>
+                    <li>
+                        <a href="#" class="dropdown-item">Child 3</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" href="#">
+                    Menu 1
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                    <li>
+                        <a href="#" class="dropdown-item">Child 1</a>
+                    </li>
+                    <li>
+                        <a href="#" class="dropdown-item">Child 2</a>
+                    </li>
+                    <li>
+                        <a href="#" class="dropdown-item">Child 3</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" href="#">
+                    Menu 1
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                    <li>
+                        <a href="#" class="dropdown-item">Child 1</a>
+                    </li>
+                    <li>
+                        <a href="#" class="dropdown-item">Child 2</a>
+                    </li>
+                    <li>
+                        <a href="#" class="dropdown-item">Child 3</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" href="#">
+                    Menu 1
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                    <li>
+                        <a href="#" class="dropdown-item">Child 1</a>
+                    </li>
+                    <li>
+                        <a href="#" class="dropdown-item">Child 2</a>
+                    </li>
+                    <li>
+                        <a href="#" class="dropdown-item">Child 3</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div> -->
+
+    <!-- <form class="d-flex me-5">
+        <input type="search" class="form-control me-2" placeholder="Search">
+        <button class="btn btn-outline-light" type="submit">Search</button>
+    </form>
+
+    <div class="profile-logo dropstart">
+        <button class="btn btn-outline-light dropdown-toggle" data-bs-toggle="dropdown">
+            Profile
+        </button>
+        <ul class="dropdown-menu dropdown-menu-dark">
+            <li><a href="/register" class="dropdown-item">Register</a></li>
+            <li><a href="/login" class="dropdown-item">Login</a></li>
+            <li><a href="#" class="dropdown-item">Profile</a></li>
+            <li><a href="#" class="dropdown-item">Log out</a></li>
+        </ul>
+    </div> -->
+
+<!-- </nav> -->
+
+<div class="container-fluid-page">
+    <div class="page_box pd-3 mt-2">
+        Registration
+    </div>
+    <div class="page_content shadow p-3 position-relative">
+        <div class="page_content-data position-relative text-center">
+            <form #userData="ngForm" (ngSubmit)="onSubmit(userData.value, '/reg')" class="regform">
+                <label>Enter your name: </label>
+                <input type="text" name="username" placeholder="Name: " ngModel>
+                <br>
+                <br>
+                <label for="email"> Enter your email ID: </label>
+                <input type="email" name="email" placeholder="Email: " id="email" required ngModel>
+                <br>
+                <br>
+                <label>Enter your Password: </label>
+                <input type="password" name="password" placeholder="Password: " ngModel>
+                <br>
+                <br>
+                <label>Confirm your password: </label>
+                <input type="password" name="cpass" placeholder="Password: " required ngModel>
+                <br>
+                <br>
+                <a><button>Submit</button></a>
+                
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- <form #userData="ngForm" (ngSubmit)="onSubmit(userData.value)">
+    <label>Enter your name: </label>
+    <input type="text" name="username" placeholder="Name: " ngModel>
+    <br>
+    <br>
+    <label for="email"> Enter your email ID: </label>
+    <input type="email" name="email" placeholder="Email: " id="email" required ngModel>
+    <br>
+    <br>
+    <label>Enter your Password: </label>
+    <input type="password" name="password" placeholder="Password: " ngModel>
+    <br>
+    <br>
+    <label>Confirm your password: </label>
+    <input type="password" name="cpass" placeholder="Password: " required ngModel>
+    <br>
+    <br>
+    <a href="/reg"><button>Submit</button></a>
+    
+</form> -->

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EnergyMonitoring</title>
+    <style>
+        table, th, td{
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <a href="/meterdata">Get Meter Details</a>
+        </div>
+        <hr>
+        
+        <% if(data!=null) { %>
+        <table>
+        <tr>
+            <th>ID</th>
+            <th>Meter name </th>
+            <th>Model number</th>
+        </tr>
+        <% data.forEach(function(item){ %>
+        <tr>
+            <td><%= item.id %></td>
+            <td><%= item.meter_name %></td>
+            <td><%= item.model_num %></td>        
+        </tr>
+        <% }) %>
+        </table>
+        <% } %>
+</body>
+</html>

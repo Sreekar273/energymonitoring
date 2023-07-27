@@ -1,0 +1,129 @@
+<!-- <p>user-energydata works!</p> -->
+<style>
+  table, th, td{
+      border: 1px solid black;
+      border-collapse: collapse;
+  }
+</style>
+
+<div class="container-fluid-page">
+  <div class="page_box pd-3 mt-2">
+      Energy Consumption
+  </div>
+  <div class="page_content shadow p-3 position-relative">
+      <div class="page_content-data position-relative text-center">
+        <!-- <div class="selectBox">
+          <select id="duration">
+            <option disabled selected value> -- select an option -- </option>
+            <option value="min">Every 15min</option>
+            <option value="day">Daily</option>
+            <option value="month">Monthly</option>
+            <option value="year">Yearly</option>
+          </select>
+        </div> -->
+        <div>
+          <button (click)="toggleZone()">
+            Zone
+          </button>
+          <button (click)="toggleMeter()">
+            Meter
+          </button>
+        </div>
+          <div class="card">
+            <div class="card-body">
+              <div>
+                <input *ngIf="zoneDisplay" type="text" id="zone_name" [(ngModel)]="zone_name">
+          </div>
+        </div>
+        <div class="meter" *ngIf="meterDisplay || zoneDisplay">
+          <div>
+            <button (click)="toggleButton()">
+              Every 15min
+            </button>
+            <button (click)="toggleButton2()">
+              Day
+            </button>
+            <button (click)="toggleButton3()">
+              Month
+            </button>
+            <button (click)="toggleButton1()">
+              Custom
+            </button>
+          </div>
+              <div>
+                <!-- <canvas id="myChart">{{chart}}</canvas> -->
+                <input type="text" id="meter" [(ngModel)]="meter" *ngIf="meterDisplay">
+                <input type="text" id="model" [(ngModel)]="model" *ngIf="meterDisplay">
+                <button *ngIf="toDisplay4" type="submit" (click)="onClickMeter()" id="meterbutton"> Submit1 </button>
+                <br>
+                <input *ngIf="toDisplay" type="date" id="currdate" value="2023-07-02" [(ngModel)]="date">
+                <button *ngIf="toDisplay" type="submit" (click)="onClick15()" id="currdatebutton"> Submit </button>
+                <input *ngIf="toDisplay1" type="date" id="startdate" value="2023-07-02" [(ngModel)]="sdate">
+                <input *ngIf="toDisplay1" type="date" id="enddate" value="2023-07-06" [(ngModel)]="edate">
+                <button *ngIf="toDisplay1" type="submit" (click)="onSubmit()" id="date">Submit</button>
+                <input *ngIf="toDisplay2" type="month" [(ngModel)]="currmonth" id="month">
+                <button *ngIf="toDisplay2" type="submit" (click)="onClickDay()" id="monthbutton">Submit</button>
+                <input *ngIf="toDisplay3" type="year" [(ngModel)]="curryear" id="year">
+                <button *ngIf="toDisplay3" type="submit" (click)="onClickMonth()" id="yearbutton">Submit</button>
+              </div>
+            </div>
+
+        <canvas id="myChart">{{chart}}</canvas>
+      </div>
+    </div> 
+        
+        
+        <div class="card mt-3 me-0">
+          <div class="card-body">
+            <div class="col s7">
+              <div class="table">
+                <table class="responsive-table highLight">
+                  <thead>
+                    <tr>
+                      <!-- <th>ID</th> -->
+                      <!-- <th>Meter_ID</th> -->
+                      <th>Energy(kwh)</th>
+                      <th>Voltage</th>
+                      <th>Current</th>
+                      <th>Power_Factor</th>
+                      <th>Frequency</th>
+                      <th>Created Date</th>
+                      <th>Created Time</th>
+                      <th>Last modified</th>
+                    </tr>
+                  </thead>
+                  <tr *ngFor="let emp of totalAngularPackages">
+                    <!-- <td>{{emp.id}}</td> -->
+                    <!-- <td>{{emp.meterID}}</td> -->
+                    <td>{{emp.energy_kwh}}</td>
+                    <td>{{emp.voltage}}</td>
+                    <td>{{emp.current}}</td>
+                    <td>{{emp.pf}}</td>
+                    <td>{{emp.freq}}</td>
+                    <td>{{emp.createdDate}}</td>
+                    <td>{{emp.created}}</td>
+                    <td>{{emp.time}}</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- <div>
+          <button (click)="logout()">Logout</button>
+      </div> -->
+  </div>
+
+
+<!-- <script>
+  const dates = ['2023-07-02', '2023-07-03', '2023-07-04', '2023-07-05', '2023-07-06'];
+  const datapoints = [2,5,7,9,11];
+  function filterData(){
+    const dates2 = [...this.dates];
+    console.log(dates2);
+  }
+</script> -->
+  
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.bundle.min.js"></script>

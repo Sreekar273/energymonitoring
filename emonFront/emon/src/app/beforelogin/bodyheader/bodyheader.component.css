@@ -1,0 +1,41 @@
+h1{
+    text-align: center;
+    font-family: 'Concert One', cursive;
+}
+
+p{
+    text-align: center;
+    margin-top: 50px;
+    /* color:#6c7ae0 ; */
+    /* font-size:24px; */
+    /* line-height:38px; */
+}
+
+.page{
+    color: white;
+    padding: 0 1rem;
+    background-color: #f1f5f9;
+}
+
+.page_box{
+    min-height: 120px;
+    background-color: #1e293b;
+    color: white;
+    font-size: 36px;
+    text-align: center;
+}
+
+.page_content{
+    min-height: calc(100vh);
+    border-radius: 10px;
+    margin-top: -0.7rem;
+    background-color: white;
+    color: black;
+    font-size: 20px;
+}
+
+.page-content-data{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

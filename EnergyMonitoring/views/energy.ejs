@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EnergyMonitoring</title>
+    <style>
+        table, th, td{
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <a href="/energydata">Get Energy Details</a>
+        </div>
+        <hr>
+        
+        <% if(details!=null) { %>
+        <table>
+        <tr>
+            <th>ID</th>
+            <th>Meter ID</th>
+            <th>Energy(kwh)</th>
+            <th>Voltage</th>
+            <th>Current</th>
+            <th>Power factor </th>
+            <th>Frequency</th>
+        </tr>
+        <% details.forEach(function(item){ %>
+        <tr>
+            <td><%= item.id %></td>
+            <td><%= item.meterID %></td>
+            <td><%= item.energy_kwh %></td>
+            <td><%= item.voltage %></td>
+            <td><%= item.current %></td>
+            <td><%= item.pf %></td>
+            <td><%= item.freq %></td>
+        
+        </tr>
+        <% }) %>
+        </table>
+        <% } %>
+</body>
+</html>

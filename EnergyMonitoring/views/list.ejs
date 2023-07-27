@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EnergyMonitoring</title>
+    <style>
+        table, th, td{
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <a href="/getdetails">Get Details</a>
+        </div>
+        <hr>
+        
+        <% if(details!=null) { %>
+        <table>
+        <tr>
+            <th>Name</th>
+            <th>Username </th>
+            <th>Password</th>
+            <th>Email </th>
+            <th>Address </th>
+            <th>Time</th>
+            <th>Time</th>
+        </tr>
+        <% details.forEach(function(item){ %>
+        <tr>
+            <td><%= item.name %></td>
+            <td><%= item.username %></td>
+            <td><%= item.password %></td>
+            <td><%= item.email %></td>
+            <td><%= item.address %></td>
+            <td><%= item.created %></td>
+            <td><%= item.modified %></td>
+        
+        </tr>
+        <% }) %>
+        </table>
+        <% } %>
+</body>
+</html>

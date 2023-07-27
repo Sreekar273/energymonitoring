@@ -1,0 +1,42 @@
+<!-- <p>login works!</p>
+<login-header></login-header>
+
+<div id="loginform">
+    <form action="/login" method="post">
+        <label>Enter your name: </label>
+        <input type="text" name="username" placeholder="Name: " class="input">
+        <br>
+        <br>
+        <label>Enter your Password: </label>
+        <input type="password" name="password" placeholder="Password: " class="input">
+        <br>
+        <br>
+        <button type="submit" name="Submit" id="submit">Submit</button>
+    </form>
+</div> -->
+
+
+<div class="container-fluid-page">
+    <div class="page_box pd-3 mt-2">
+        <!-- <login-header></login-header> -->
+        Login
+    </div>
+    
+    <div class="page_content shadow p-3 position-relative">
+        <div class="page_content-data position-absolute text-center">   
+            <div id="loginform">
+                <form #userData="ngForm" (ngSubmit)="onSubmit(userData.value, '/dashboard')" class="regform">
+                    <label>Enter your name: </label>
+                    <input type="text" name="username" placeholder="Name: " class="input" ngModel>
+                    <br>
+                    <br>
+                    <label>Enter your Password: </label>
+                    <input type="password" name="password" placeholder="Password: " class="input" ngModel>
+                    <br>
+                    <br>
+                    <a><button>Submit</button></a>
+                </form>
+            </div>
+        </div>
+    </div>         
+</div>
